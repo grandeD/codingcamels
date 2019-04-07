@@ -101,8 +101,8 @@
       </div>
       
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="audiochat.html">Audio Chat</a>
-        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
+            <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="audiochat.html">Audio Chat</a>
+            <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
         <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
         <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
       </nav>
@@ -128,10 +128,12 @@
           </div>
           <form id="message-form" action="#">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" id="message">
-              <label class="mdl-textfield__label" for="message">Message...</label>
+            <p class="mdl-textfield__input" id = "message"></p> 
+              <!-- <label id = "message"></label> -->
+              <!-- <input class="mdl-textfield__input" type="text" id="message">
+              <label class="mdl-textfield__label" for="message">Message...</label> -->
             </div>
-            <button id="submit" disabled type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            <button id="submit"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
               Send
             </button>
           </form>
@@ -153,6 +155,33 @@
   </main>
 </div>
 
+<script>
+  window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+  let finalTranscript = '';
+  let recognition = new window.SpeechRecognition();
+
+  recognition.interimResults = true;
+  recognition.maxAlternatives = 10;
+  recognition.continuous = true;
+
+  recognition.onresult = (event) => {
+    let interimTranscript = '';
+    for (let i = event.resultIndex, len = event.results.length; i < len; i++) {
+      let transcript = event.results[i][0].transcript;
+      if (event.results[i].isFinal) {
+        finalTranscript += transcript;
+      } else {
+        interimTranscript += transcript;
+      }
+    }
+
+    document.querySelector('#message').innerHTML = finalTranscript + '<i style="color:#ddd;">' + interimTranscript + '</>';
+    finalTranscript = "";
+    interimTranscript = "";
+
+    }
+  recognition.start();
+</script>
 <!-- Import and configure the Firebase SDK -->
 <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
 <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
@@ -163,6 +192,6 @@
 <script src="/__/firebase/5.9.1/firebase-firestore.js"></script>
 <script src="/__/firebase/init.js"></script>
 
-<script src="scripts/main.js"></script>
+<script src="scripts/audiochat.js"></script>
 </body>
 </html>
