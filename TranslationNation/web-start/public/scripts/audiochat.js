@@ -39,7 +39,7 @@ $(function(){
         var msg = new SpeechSynthesisUtterance();
         var voices = window.speechSynthesis.getVoices();
         msg.voice = voices[$('#voices').val()];
-        msg.rate = 10 / 10;
+        msg.rate = 8 / 10;
         msg.pitch = 1;
         msg.text = testListen;
   
@@ -136,9 +136,9 @@ function MessageListen()
     .limit(1);
     query.onSnapshot(function(snapshot) {
         snapshot.docChanges().forEach(function(change) {
-            var message = change.doc.data();
-            console.log(message.text)
-            testListen = message.text;
+            var list = document.getElementById(change.doc.id).childNodes;
+            console.log(list[1].textContent);
+            testListen = list[1].textContent;
           
         });
       });
