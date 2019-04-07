@@ -32,9 +32,9 @@ main, #messages-card {
 }
 #messages-card {
   /* margin-top: 15px; */
-  width: 1000px;
+  width: 1050px;
   /* padding-top: 15px; */
-  margin: 15px 0 15px 275px ;
+  margin: 15px 0 15px 420px ;
   /* margin: 15px 0 15px 900; */
 }
 .mdl-layout__header-row span {
@@ -42,7 +42,7 @@ main, #messages-card {
   margin-top: 17px;
 }
 .mdl-grid {
-  max-width: 1024px;
+  /* max-width: 1024px; */
   margin: auto;
 }
 .material-icons {
@@ -64,10 +64,16 @@ main, #messages-card {
   left: 0;
 } */
 
-/* .mdl-navigation__link:hover{
-  background-color: #1976d2;
-  color: #fff;
-} */
+.mdl-navigation__link {
+  text-align: center;
+  font-weight: bold;
+  font-size:  18px;
+}
+
+.mdl-navigation .mdl-navigation__link:hover{
+  background-color: #4db6ac !important;
+  color: #264653 !important;
+}
 
 .mdl-card__supporting-text {
   width: auto;
@@ -157,32 +163,35 @@ main, #messages-card {
 #user-container {
   position: absolute;
   display: flex;
-  flex-direction: row;
-  top: 22px;
+  /* flex-direction: row; */
+  top: 100px;
   width: 100%;
-  right: 0;
-  padding-left: 10px;
-  justify-content: flex-end;
-  padding-right: 10px;
-  padding-top: 50px;
-  color: black;
+  /* right: 0; */
+  /* padding-left: 10px; */
+  /* justify-content: flex-end; */
+  /* padding-right: 10px;
+  padding-top: 50px; */
+  /* color: black; */
+  margin: 0 40px;
 }
 #user-container #user-pic {
   top: -3px;
   /* position: relative; */
-  display: inline-block;
-  background-image: url('/images/profile_placeholder.png');
+  /* display: inline-block; */
+  /* background-image: url('/images/profile_placeholder.png'); */
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
   background-size: 40px;
   border-radius: 20px;
+  background-color: #fff;
 }
 #user-container #user-name {
   font-size: 16px;
+  padding: 10px;
   /* line-height: 36px; */
-  padding-right: 10px;
-  padding-left: 20px;
+  /* padding-right: 10px;
+  padding-left: 20px; */
 }
 #image-form #submitImage {
   width: auto;
@@ -194,7 +203,18 @@ main, #messages-card {
 }
 
 #translation {
-  padding-top: 100px;
+  padding: 125px 0 30px;
+  margin: 0 auto;
+}
+
+#translation #trans_txt {
+  color: #264653;
+  font-weight: bolder;
+}
+
+#translation #google_translate_element {
+  margin-left: 50px;
+  margin-top: -10px;
 }
 
 .message img {
