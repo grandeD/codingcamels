@@ -17,6 +17,11 @@
  html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
+
+/* #nav_sb {
+  width: 600px;
+} */
+
 main, #messages-card {
   height: 100%;
   padding-bottom: 0;
@@ -27,6 +32,9 @@ main, #messages-card {
 }
 #messages-card {
   margin-top: 15px;
+  width: 1000px;
+  /* padding-top: 15px; */
+  margin: auto;
 }
 .mdl-layout__header-row span {
   margin-left: 15px;
@@ -45,6 +53,12 @@ main, #messages-card {
   padding: 0;
   margin: 0 auto;
 }
+
+/* .mdl-navigation__link:hover{
+  background-color: #1976d2;
+  color: #fff;
+} */
+
 .mdl-card__supporting-text {
   width: auto;
   height: 100%;
@@ -137,6 +151,8 @@ main, #messages-card {
   padding-left: 10px;
   justify-content: flex-end;
   padding-right: 10px;
+  padding-top: 50px;
+  color: black;
 }
 #user-container #user-pic {
   top: -3px;
@@ -163,6 +179,11 @@ main, #messages-card {
 #image-form #submitImage .material-icons {
   top: -1px;
 }
+
+#translation {
+  padding-top: 100px;
+}
+
 .message img {
   max-width: 300px;
   max-height: 200px;

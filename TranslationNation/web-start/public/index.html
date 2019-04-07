@@ -53,10 +53,10 @@
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
   <!-- Header section containing logo -->
-  <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
+  <!-- <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
       <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
-        <h3><i class="material-icons">chat_bubble_outline</i> Friendly Chat</h3>
+        <h3><i class="material-icons">chat_bubble_outline</i> YEAH BOIIIII</h3>
       </div>
       <div id="user-container">
         <div hidden id="user-pic"></div>
@@ -69,6 +69,52 @@
         </button>
       </div>
     </div>
+  </header> -->
+
+  <header id="nav_sb" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer ">
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Translation Nation</span>
+
+      <div id="user-container">
+        <div hidden id="user-pic"></div>
+        <div hidden id="user-name"></div>
+        <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-400">
+          Sign-out
+        </button>
+        <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-400">
+          <i class="material-icons">account_circle</i>Sign-in with Google
+        </button>
+      </div>
+
+      <div id="translation">
+        <p>Translate this page in your preferred language:</p> 
+    
+        <div id="google_translate_element"></div> 
+          
+        <script type="text/javascript"> 
+        function googleTranslateElementInit() { 
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element'); 
+        } 
+        </script> 
+      
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      </div>
+      
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
+        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
+        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
+        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
+      </nav>
+
+      
+
+
+    </div>
+
+    <!-- <div class="mdl-layout__drawer">
+      <p>"Our motto...."</p>
+    </div> -->
   </header>
 
   <main class="mdl-layout__content mdl-color--grey-100">
