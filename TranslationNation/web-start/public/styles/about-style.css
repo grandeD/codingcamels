@@ -317,6 +317,7 @@ main, #messages-card {
 
 #developers {
   margin: 0 auto;
+  padding-bottom: 50px;
 }
  
 div.item {
@@ -337,8 +338,12 @@ div.item {
   margin: 15px 0 15px 345px ;
 } 
 
-#main-body {
-  /* padding: 80px; */
+#h3-trans {
+  padding-top: 50px;
+}
+
+#p-trans {
+  padding: 0 50px;
 }
 
 h3 {
