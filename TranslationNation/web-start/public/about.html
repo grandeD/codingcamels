@@ -17,7 +17,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Learn how to use the Firebase platform on the Web">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Friendly Chat</title>
+  <title>Translation Nation</title>
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
@@ -52,28 +52,29 @@
 <body>
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-  <!-- Header section containing logo -->
-  <!-- <header id="nav_sb" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer ">
+<!-- Header section containing logo -->
+<header id="nav_sb" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer ">
     <div class="mdl-layout__drawer mdl-color--teal-100">
-      <span class="mdl-layout-title">Translation Nation</span>
-
+      <span class="mdl-layout-title"><a href=index.html><img src="./images/logo.png" class = "logo" id="bannerlogo" style="width:250px;height:230px;">
+      </a></span>
+      
       <div id="user-container">
         <div hidden id="user-pic"></div>
         <div hidden id="user-name"></div>
         <div>
-          <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-400">
+          <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
           Sign-out
           </button>
         </div>
         <div>
-          <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-400">
+          <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
             <i class="material-icons">account_circle</i>Sign-in with Google
           </button>
         </div>
       </div>
 
       <div id="translation">
-        <p>Translate this page in your preferred language:</p> 
+        <p id="trans_txt">Translate to the language of your choice:</p> 
     
         <div id="google_translate_element"></div> 
           
@@ -85,29 +86,30 @@
       
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       </div>
-      
+
+
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href=""><i class="fas fa-microphone"></i> Audio Chat</a>
-        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Text Chat</a>
-        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">About Us</a>
+        <a class="mdl-navigation__link mdl-color-text--white" href="audiochat.html"><i class="fas fa-microphone"></i>  Audio Chat</a>
+        <a class="mdl-navigation__link mdl-color-text--white" href="textchat.html"><i class="fas fa-comments"></i>  Text Chat</a>
+        <a class="mdl-navigation__link mdl-color-text--white" href="about.html"><i class="fas fa-users"></i>  About Us</a>
       </nav>
 
-      
-
+      <!-- <div id="motto"> -->
+        <h4 id="motto">"Speak volumes, beyond words."</h4>
+      <!-- </div> -->
 
     </div>
-  </header> -->
+  </header>
 
   
   <main class="mdl-layout__content mdl-color--grey-100">
-    <div class="mdl-grid portfolio-max-width">
+    <div id="outside-body" class="mdl-grid">
 
       <div id="main_body" class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
-        <div class="mdl-grid portfolio-copy">
+       
           <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Translation Nation</h3>
           <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
-            <p>
-              Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet. Voluptate voluptate irure occaecat deserunt incididunt esse in. Sunt velit aliquip sunt elit ex nulla reprehenderit qui ut eiusmod ipsum do. Duis veniam reprehenderit laborum occaecat id proident nulla veniam. Duis enim deserunt voluptate aute veniam sint pariatur exercitation. Irure mollit est sit labore est deserunt pariatur duis aute laboris cupidatat. Consectetur consequat esse est sit veniam adipisicing ipsum enim irure.
+            <p>We are the Coding Camels!! (a group of third-years studying CS-related fields at UCI) We created Translation Nation, which is a web app for chatting that strives to overcome language barriers by allowing users to speak or text in whatever language they want to, and be able to talk to someone else who may not speak the same language.
             </p>
           </div>
             
@@ -116,29 +118,28 @@
           <div id="developers"> 
             <div>
               <div class="item">
-                  <img src="images/melissa.jpg"/>
+                  <img src="./images/melissa.jpg"/>
                   <span class="caption">Melissa Torres</span>
               </div>
               <div class="item">
-                  <img src="images/diana.jpg"/>
+                  <img src="./images/diana.jpg"/>
                   <span class="caption">Diana Grande</span>
               </div>
             </div>
                   
             <div>
               <div class="item">
-                  <img src="images/dianne.png"/>
+                  <img src="./images/dianne.png"/>
                   <span class="caption">Dianne Ison</span>
               </div>
               <div class="item">
-                  <img src="images/melissa.jpg"/>
+                  <img src="images/amanda.jpg"/>
                   <span class="caption">Amanda Chou</span>
               </div>
             </div>
           </div>
 
-            <!-- </div> -->
-        </div>
+       
       </div>
 
 
