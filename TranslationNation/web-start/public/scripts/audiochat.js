@@ -14,6 +14,46 @@
  * limitations under the License.
  */
 'use strict';
+var testListen = "";
+
+$(function(){
+    // if ('speechSynthesis' in window) {
+    //   speechSynthesis.onvoiceschanged = function() {
+    //     var $voicelist = $('#voices');
+  
+    //     if($voicelist.find('option').length == 0) {
+    //       speechSynthesis.getVoices().forEach(function(voice, index) {
+    //         var $option = $('<option>')
+    //         .val(index)
+    //         .html(voice.name + (voice.default ? ' (default)' :''));
+  
+    //         $voicelist.append($option);
+    //       });
+  
+    //       $voicelist.material_select();
+    //     }
+    //   }
+  
+      $('#listen').click(function(){
+        var text = $('#message').val();
+        var msg = new SpeechSynthesisUtterance();
+        var voices = window.speechSynthesis.getVoices();
+        msg.voice = voices[$('#voices').val()];
+        msg.rate = 10 / 10;
+        msg.pitch = 1;
+        msg.text = testListen;
+  
+        msg.onend = function(e) {
+          console.log('Finished in ' + event.elapsedTime + ' seconds.');
+        };
+  
+        speechSynthesis.speak(msg);
+      })
+    // } else {
+    //   $('#modal1').openModal();
+    // }
+  });
+
 
 // Signs-in Friendly Chat.
 function signIn() {
@@ -86,6 +126,22 @@ function loadMessages() {
       }
     });
   });
+}
+
+function MessageListen()
+{
+    var query = firebase.firestore()
+    .collection('messages')
+    .orderBy('timestamp', 'desc')
+    .limit(1);
+    query.onSnapshot(function(snapshot) {
+        snapshot.docChanges().forEach(function(change) {
+            var message = change.doc.data();
+            console.log(message.text)
+            testListen = message.text;
+          
+        });
+      });
 }
 
 // Saves a new message containing an image in Firebase.
@@ -226,7 +282,6 @@ var MESSAGE_TEMPLATE =
       '<div class="spacing"><div class="pic"></div></div>' +
       '<div class="message"></div>' +
       '<div class="name"></div>' +
-      '<button id = "listen" >Listen</button>' +
     '</div>';
 
 // Adds a size to Google Profile pics URLs.
@@ -328,9 +383,10 @@ var userNameElement = document.getElementById('user-name');
 var signInButtonElement = document.getElementById('sign-in');
 var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
-
+var listenButtonElement = document.getElementById('listen');
 // Saves message on form submit.
 messageFormElement.addEventListener('submit', onMessageFormSubmit);
+listenButtonElement.addEventListener("click", MessageListen);
 signOutButtonElement.addEventListener('click', signOut);
 signInButtonElement.addEventListener('click', signIn);
 
@@ -355,3 +411,4 @@ firestore.settings(settings);
 
 // We load currently existing chat messages and listen to new ones.
 loadMessages();
+
