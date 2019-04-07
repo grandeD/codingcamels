@@ -72,18 +72,22 @@
   </header> -->
 
   <header id="nav_sb" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer ">
-    <div class="mdl-layout__drawer">
+    <div class="mdl-layout__drawer mdl-color--teal-100">
       <span class="mdl-layout-title">Translation Nation</span>
 
       <div id="user-container">
         <div hidden id="user-pic"></div>
         <div hidden id="user-name"></div>
-        <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-400">
+        <div>
+          <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-400">
           Sign-out
-        </button>
-        <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-400">
-          <i class="material-icons">account_circle</i>Sign-in with Google
-        </button>
+          </button>
+        </div>
+        <div>
+          <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-400">
+            <i class="material-icons">account_circle</i>Sign-in with Google
+          </button>
+        </div>
       </div>
 
       <div id="translation">
@@ -101,27 +105,23 @@
       </div>
       
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
-        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
-        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
-        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Link</a>
+        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href=""><i class="fas fa-microphone"></i> Audio Chat</a>
+        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">Text Chat</a>
+        <a class="mdl-navigation__link mdl-color-text--light-blue-700" href="">About Us</a>
       </nav>
 
       
 
 
     </div>
-
-    <!-- <div class="mdl-layout__drawer">
-      <p>"Our motto...."</p>
-    </div> -->
   </header>
 
   <main class="mdl-layout__content mdl-color--grey-100">
     <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
+        
 
       <!-- Messages container -->
-      <div id="messages-card" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
+      <div id="messages-card" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
         <div class="mdl-card__supporting-text mdl-color-text--grey-600">
           <div id="messages">
             <span id="message-filler"></span>
@@ -131,13 +131,13 @@
               <input class="mdl-textfield__input" type="text" id="message">
               <label class="mdl-textfield__label" for="message">Message...</label>
             </div>
-            <button id="submit" disabled type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            <button id="submit" disabled type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--teal-300">
               Send
             </button>
           </form>
           <form id="image-form" action="#">
             <input id="mediaCapture" type="file" accept="image/*" capture="camera">
-            <button id="submitImage" title="Add an image" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--amber-400 mdl-color-text--white">
+            <button id="submitImage" title="Add an image" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--teal-300 mdl-color-text--white">
               <i class="material-icons">image</i>
             </button>
           </form>
