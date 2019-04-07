@@ -58,28 +58,26 @@
   <header id="nav_sb" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer ">
     <div class="mdl-layout__drawer mdl-color--teal-100">
 
-      <a href=index.html><img src="./images/logo.png" class = "logo" id="bannerlogo" style="width:250px;height:230px;">
-      </a>
-      
-      <span class="mdl-layout-title">Translation Nation</span>
+            <span class="mdl-layout-title"><a href=index.html><img src="./images/logo.png" class = "logo" id="bannerlogo" style="width:250px;height:230px;">
+            </a></span>
 
       <div id="user-container">
         <div hidden id="user-pic"></div>
         <div hidden id="user-name"></div>
         <div>
-          <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-400">
+          <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
           Sign-out
           </button>
         </div>
         <div>
-          <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-400">
+          <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
             <i class="material-icons">account_circle</i>Sign-in with Google
           </button>
         </div>
       </div>
 
       <div id="translation">
-        <p>Translate to the language of your choice:</p> 
+        <p id="trans_txt">Translate to the language of your choice:</p> 
     
         <div id="google_translate_element"></div> 
           
@@ -97,6 +95,9 @@
         <a class="mdl-navigation__link mdl-color-text--white" href="textchat.html"><i class="fas fa-comments"></i>  Text Chat</a>
         <a class="mdl-navigation__link mdl-color-text--white" href=""><i class="fas fa-users"></i>  About Us</a>
       </nav>
+
+      <h4 id="motto">"Speak volumes, beyond words."</h4>
+
     </div>
   </header>
 

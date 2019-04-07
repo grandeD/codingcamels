@@ -22,6 +22,16 @@
   width: 600px;
 } */
 
+/* #bannerlogo
+{
+  margin-top:100px;
+  margin-left:30px;
+} */
+
+.mdl-layout-title
+{
+  margin-top:10px;
+}
 main, #messages-card {
   height: 100%;
   padding-bottom: 0;
@@ -173,10 +183,10 @@ main, #messages-card {
   position: absolute;
   display: flex;
   /* flex-direction: row; */
-  top: 100px;
+  top: 270px;
   width: 100%;
   /* right: 0; */
-  /* padding-left: 10px; */
+  padding-left: 10px;
   /* justify-content: flex-end; */
   /* padding-right: 10px;
   padding-top: 50px; */
@@ -212,7 +222,7 @@ main, #messages-card {
 }
 
 #translation {
-  padding: 125px 0 30px;
+  padding: 100px 0 10px;
   margin: 0 auto;
 }
 
@@ -277,10 +287,13 @@ main, #messages-card {
 }
 
 .mdl-textfield__label:after {
-  background-color: #0288D1;
+  background-color: #264653;
 }
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-  color: #0288D1;
+  color: #264653;
+  position: absolute;
+  bottom: -30px;
+  margin-top:10px;
 }
 .mdl-button .material-icons {
   top: -1px;
@@ -290,7 +303,7 @@ main, #messages-card {
 #motto {
   font-size: 32px;
   position: absolute;
-  bottom: 70px;
+  bottom: 50px;
   text-align: center;
   font-style: italic;
 }
