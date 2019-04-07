@@ -81,10 +81,19 @@ main, #messages-card {
   padding-top: 0;
   padding-bottom: 0;
 }
+
+#sign-in{
+  background-color: #264653;
+}
+
+#sign-out {
+  background-color: #264653;
+}
+
 #messages {
   overflow-y: auto;
   margin-bottom: 10px;
-  height: calc(100% - 80px);
+  height: calc(95% - 80px);
   display: flex;
   flex-direction: column;
 }
@@ -243,6 +252,30 @@ main, #messages-card {
     background-size: 33px;
   }
 }
+
+#listen {
+  background-color: #264653;
+  color: white;
+  padding:  5px 15px;
+  border: none;
+  text-align: center;
+  margin-top: 5px;
+}
+
+#listen:hover {
+  background-color: #4db6ac;
+  color: #264653;
+}
+
+#message {
+  /* bottom: 0; */
+  /* padding-bottom: -30px; */
+  /* padding-top: 20px; */
+  position: absolute;
+  bottom: -10px;
+  margin-top:10px;
+}
+
 .mdl-textfield__label:after {
   background-color: #0288D1;
 }
@@ -252,4 +285,12 @@ main, #messages-card {
 .mdl-button .material-icons {
   top: -1px;
   margin-right: 5px;
+}
+
+#motto {
+  font-size: 32px;
+  position: absolute;
+  bottom: 70px;
+  text-align: center;
+  font-style: italic;
 }
